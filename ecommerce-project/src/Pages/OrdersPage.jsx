@@ -1,11 +1,11 @@
 import {Header} from '../components/Header';
 import './OrdersPage.css';
 
-export function OrdersPage() {
+export function OrdersPage({cart}) {
   return (
     <>
         <title>Orders</title>
-        <Header />
+        <Header cart={cart} />
     <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
 
       <div className="orders-page">
