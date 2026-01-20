@@ -4,6 +4,9 @@ import '../../components/CheckoutHeader.jsx';
 export function CheckoutPage() {
   return (
     <>
+
+      <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
+
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">
