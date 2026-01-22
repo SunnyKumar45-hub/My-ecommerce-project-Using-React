@@ -1,9 +1,9 @@
 import {Header} from '../components/Header';
 
-export function NotFound() {
+export function NotFound({cart}) {
   return(
      <>
-        <Header />
+        <Header cart={cart} />
         <div className='mt-40'>
           <p>Page not found</p>
         </div>

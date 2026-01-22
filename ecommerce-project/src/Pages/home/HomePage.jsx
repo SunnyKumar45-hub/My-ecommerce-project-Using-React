@@ -4,7 +4,7 @@ import { Header } from '../../components/Header';
 import { ProductsGrid } from './ProductsGrid';
 import './HomePage.css';
 
-export function HomePage({ cart }) {
+export function HomePage({ cart, loadCart }) {
 
   const [products, setProducts] = useState([]);
 
@@ -20,7 +20,7 @@ export function HomePage({ cart }) {
 
   return (
     <>
-      <Header cart={cart} />
+      <Header cart={cart} loadCart={loadCart}/>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
 
       <div className="home-page">
