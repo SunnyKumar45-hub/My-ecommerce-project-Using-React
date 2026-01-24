@@ -29,6 +29,7 @@ export function HomePage({ cart, loadCart }) {
   return (
     <>
       <Header cart={cart} loadCart={loadCart} />
+      
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
 
       <div className="home-page">
