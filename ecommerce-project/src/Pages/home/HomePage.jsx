@@ -34,7 +34,7 @@ export function HomePage({ cart, loadCart }) {
 
       <div className="home-page">
 
-        <ProductsGrid products={products} />
+        <ProductsGrid products={products} loadCart={loadCart} />
       </div>
     </>
   )
