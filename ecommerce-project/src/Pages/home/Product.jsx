@@ -1,14 +1,14 @@
 import { formatMoney } from '../../utils/money';
 import { useState } from 'react';
 import axios from 'axios';
-import { API_URL } from '../../config'; // ADD THIS
+import { API_URL } from '../../config';
 
 export function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   
   const addToCart = async () => {
-    await axios.post(`${API_URL}/api/cart-items`, { // UPDATE THIS
+    await axios.post(`${API_URL}/api/cart-items`, {
       productId: product.id,
       quantity
     });
@@ -31,7 +31,7 @@ export function Product({ product, loadCart }) {
         <div className="product-image-container">
           <img className="product-image"
             data-testid="product-image"
-            src={`${API_URL}/${product.image}`} // UPDATE THIS - images are served from backend
+            src={`${API_URL}/${product.image}`}
             alt={product.name} />
         </div>
         <div className="product-name limit-text-to-2-lines">
@@ -58,4 +58,23 @@ export function Product({ product, loadCart }) {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
-            <opti
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div className="product-spacer"></div>
+        <div className="added-to-cart" style={{ opacity: added ? 1 : 0 }}>
+          <img src="images/icons/checkmark.png" alt="Added" />
+          Added
+        </div>
+        <button className="add-to-cart-button button-primary"
+        data-testid="add-to-cart-button"
+          onClick={addToCart}>
+          Add to Cart
+        </button>
+      </div>
+    </>
+  );
+}
