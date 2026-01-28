@@ -14,11 +14,12 @@ function HomePage({ cart, loadCart }) {
   useEffect(() => {
     const getHomeData = async () => {
       let response;
-
+      const API_URL = 'https://my-ecommerce-backend-5jue.onrender.com';
+      
       if (search) {
-         response = await axios.get(`/api/products?search=${search}`)
+         response = await axios.get(`${API_URL}/api/products?search=${search}`)
       } else{
-         response = await axios.get('/api/products')
+         response = await axios.get(`${API_URL}/api/products`)
       }
       console.log(response.data);
       setProducts(response.data);
