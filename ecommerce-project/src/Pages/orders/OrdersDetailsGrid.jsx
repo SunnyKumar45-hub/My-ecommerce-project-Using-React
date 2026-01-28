@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { Fragment } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export function OrdersDetailsGrid({ order, loadCart }) {
