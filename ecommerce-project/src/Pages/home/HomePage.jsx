@@ -5,7 +5,7 @@ import { Header } from '../../components/Header';
 import { ProductsGrid } from './ProductsGrid';
 import './HomePage.css';
 
-export function HomePage({ cart, loadCart }) {
+function HomePage({ cart, loadCart }) {
 
   const [products, setProducts] = useState([]);
   const [searchParams] = useSearchParams();
@@ -39,3 +39,5 @@ export function HomePage({ cart, loadCart }) {
     </>
   )
 }
+
+export default HomePage;
