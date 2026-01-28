@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, useSearchParams } from 'react-router';
+import { NavLink, useNavigate, useSearchParams } from 'react-router-dom';
 import { useState } from 'react';
 import './Header.css';
 import logoWhite from '../assets/images/logo-white.png';
