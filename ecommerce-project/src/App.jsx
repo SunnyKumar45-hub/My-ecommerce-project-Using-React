@@ -6,7 +6,6 @@ const App = () => {
   return (
     <>
 
-      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
